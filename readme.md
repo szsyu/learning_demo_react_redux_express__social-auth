@@ -14,3 +14,6 @@ Client:
 - react-redux
 - redux-thunk
 - redux-form
+
+
+P.S. I don't understand why in Token componet doesn't work redux actions :(

@@ -60,6 +60,7 @@ module.exports = () => {
     new TwitterStrategy(
       twitterOptios,
       async (token, tokenSecret, profile, cb) => {
+        console.log('profile', profile)
         try {
           const user = await models.User.findOne({ 'twitter.id': profile.id })
           if (user) return cb(null, user)

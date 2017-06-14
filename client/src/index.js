@@ -9,7 +9,7 @@ import reducers from './reducers'
 import App from './components/App'
 import { AUTH_OK } from './actions/types'
 
-const store = createStore(
+export const store = createStore(
   reducers,
   composeWithDevTools(applyMiddleware(reduxThunk, reduxLogger)),
 )
@@ -23,3 +23,5 @@ render(
   <Provider store={store}><App /></Provider>,
   document.getElementById('root'),
 )
+
+
